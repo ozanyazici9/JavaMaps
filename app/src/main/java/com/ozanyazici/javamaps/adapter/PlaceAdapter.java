@@ -16,7 +16,7 @@ import com.ozanyazici.javamaps.model.Place;
 
 import java.util.List;
 
-
+//RecyclerView.Adapter bir generic sınıftır <PlaceAdapter.PlaceHolder> burada hangi tür parametre alcağını belirtiyoruz.
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder> {
 
     List<Place> placeList;
@@ -81,7 +81,7 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.PlaceHolder>
     public int getItemCount() {
         return placeList.size();
     }
-
+      //PlaceHolder ın bir iç sınıf olmasının sebebi güvenlik ve inner class ın getiirdiği kolaylıklardır. Diğer sınıflar veriyi ulaşamaz ve veri korunmuş olur.
     public class PlaceHolder extends RecyclerView.ViewHolder {
 
         RecyclerRowBinding recyclerRowBinding;
